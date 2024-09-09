@@ -22,7 +22,7 @@ function createResultElement() {
 // 调用创建元素的函数，确保页面加载后有显示区域
 createResultElement();
 
-// 显示中奖结果
+// 显示中奖结果的函数
 function showWinningScore(winningSection) {
     var resultElement = document.getElementById('result');
     
