@@ -1,6 +1,4 @@
-// resultDisplay.js
-
-// 动态创建显示中奖结果的 div 元素
+// 创建显示区域
 function createResultElement() {
     console.log("创建结果显示区域...");
     var resultElement = document.createElement('div');
@@ -12,18 +10,17 @@ function createResultElement() {
     resultElement.style.fontSize = '24px';
     resultElement.style.fontWeight = 'bold';
     resultElement.style.color = 'green';
-    resultElement.style.zIndex = '10'; // 确保它显示在最前端
+    resultElement.style.zIndex = '10'; 
     resultElement.innerHTML = "等待结果...";
     
-    // 将这个 div 添加到页面 body 中
     document.body.appendChild(resultElement);
     console.log("结果显示区域创建成功！");
 }
 
-// 调用创建元素的函数，确保页面加载后有显示区域
+// 调用创建函数
 createResultElement();
 
-// 显示中奖结果的函数
+// 显示中奖结果
 function showWinningScore(winningSection) {
     var resultElement = document.getElementById('result');
     
@@ -35,8 +32,8 @@ function showWinningScore(winningSection) {
     }
 }
 
-// 当转盘停止后调用该函数并传入中奖分数
+// 调用 onSpinComplete
 function onSpinComplete(winningSection) {
-    // 调用显示函数
+    console.log("正在调用 onSpinComplete, 中奖分数为:", winningSection);
     showWinningScore(winningSection);
 }
