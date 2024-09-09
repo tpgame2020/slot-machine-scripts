@@ -2,7 +2,7 @@
 
 // 动态创建显示中奖结果的 div 元素
 function createResultElement() {
-    // 创建一个 div 元素
+    console.log("创建结果显示区域...");
     var resultElement = document.createElement('div');
     resultElement.id = 'result';
     resultElement.style.position = 'absolute';
@@ -17,6 +17,7 @@ function createResultElement() {
     
     // 将这个 div 添加到页面 body 中
     document.body.appendChild(resultElement);
+    console.log("结果显示区域创建成功！");
 }
 
 // 调用创建元素的函数，确保页面加载后有显示区域
@@ -26,11 +27,11 @@ createResultElement();
 function showWinningScore(winningSection) {
     var resultElement = document.getElementById('result');
     
-    // 如果元素存在，更新它的内容
     if (resultElement) {
+        console.log("找到结果显示区域，正在更新内容...");
         resultElement.innerHTML = "你中了 " + winningSection + " 分!";
     } else {
-        console.log("结果显示区域未找到！");
+        console.log("结果显示区域未找到！3333333");
     }
 }
 
